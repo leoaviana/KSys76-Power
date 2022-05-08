@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=KSys76 Power
+Comment=A KDE widget that provides graphical integration with system76-power daemon.
+
+Icon=preferences-devices-cpu
+Type=Service
+ServiceTypes=Plasma/Applet
+NoDisplay=true
+
+Categories=Qt;Utility;Settings;
+
+X-KDE-PluginInfo-Author=Leandro Araujo
+X-KDE-PluginInfo-Email=leoaviana.qtr@gmail.com
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=
+X-KDE-PluginInfo-Category=Utilities
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=MIT
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-Name=org.kde.plasma.ksys76power

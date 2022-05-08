@@ -1,0 +1,246 @@
+# Translation of ksys76power in Portuguese
+# Copyright (C) 2022
+# This file is distributed under the same license as the ksys76power package.
+# Leandro A. Viana<leoaviana.qtr@gmail.com>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ksys76power\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-06 07:19-0300\n"
+"PO-Revision-Date: 2022-05-06 09:56+0300\n"
+"Last-Translator: Leandro A Viana <leoaviana.qtr@gmail.com>\n"
+"Language-Team: \n"
+"Language: Portugues\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../contents/org.kde.plasma.ksys76power.desktop ../metadata.desktop
+msgid "KSys76 Power"
+msgstr ""
+
+#: ../contents/org.kde.plasma.ksys76power.desktop ../metadata.desktop
+msgid "A KDE widget that provides graphical integration with system76-power daemon."
+msgstr "Uma ferramenta para o KDE que fornece integração gráfica com o daemon system76-power"
+
+#: ../contents/config/config.qml
+msgid "General"
+msgstr "Geral"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Update interval:"
+msgstr "Intervalo de atualização:"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid " sec"
+msgstr " seg."
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Icon size:"
+msgstr "Tam. do ícone:"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid " px"
+msgstr " px"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Integrated graphics brand:"
+msgstr "Marca da placa gráfica integrada:"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Widget Icon:"
+msgstr "Ícone do widget:"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Default (sys76)"
+msgstr "Padrão (sys76)"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Nvidia/Intel/AMD Icons"
+msgstr "Icones da NVIDIA/Intel/AMD"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Widget Icon color:"
+msgstr "Cor do icone do widget:"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Default"
+msgstr "Padrão"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "White"
+msgstr "Branco"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Black"
+msgstr "Preto"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Change all icons:"
+msgstr "Alterar todos os icones:"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Apply the selected icon everywhere (notifications, widget)"
+msgstr "Alterar todos os icones pelo selecionado do widget"
+
+#: ../contents/ui/config/configGeneral.qml
+msgid "Apply selected icon color everywhere (notifications, widget)"
+msgstr "Aplicar a cor selecionada em todos os icones do widget"
+
+#: ../contents/ui/main.qml
+msgid "Changing video mode, please wait a moment..."
+msgstr "Alterando o modo de video, por favor aguarde..."
+
+#: ../contents/ui/main.qml
+msgid "NVIDIA mode selected"
+msgstr "Modo NVIDIA selecionado"
+
+#: ../contents/ui/main.qml
+msgid "Hybrid mode selected"
+msgstr "Modo Híbrido selecionado"
+
+#: ../contents/ui/main.qml
+msgid "Compute mode selected"
+msgstr "Modo Compute selecionado"
+
+#: ../contents/ui/main.qml
+msgid "Integrated mode selected"
+msgstr "Modo integrado selecionado"
+
+#: ../contents/ui/main.qml
+msgid "Profile '%1' selected"
+msgstr "Perfil '%1' selecionado"
+
+#: ../contents/ui/main.qml
+msgid "Energy profile '%1' applied successfuly."
+msgstr "Perfil de energia '%1' aplicado com sucesso."
+
+#: ../contents/ui/main.qml
+msgid "Economy"
+msgstr "Economia"
+
+#: ../contents/ui/main.qml
+msgid "Balanced"
+msgstr "Balanceado"
+
+#: ../contents/ui/main.qml
+msgid "Performance"
+msgstr "Performance"
+
+#: ../contents/ui/main.qml
+msgid "You have some missing dependencies needed by KSys76 Power widget. Please select one from the list below and press OK for instructions on how to install, when you're done press CANCEL to exit this dialog. To install packages, you may need to use sudo."
+msgstr "Alguns pacotes necessários para o KSys76 Power funcionar corretamente estão faltando. Para mais informações sobre como satisfazer essas dependências, selecione uma das opções abaixo e aperte o botão OK para obter o comando sobre como instalar, quando estiver pronto para instalar você pode fechar esse dialogo apertando o botão CANCELAR. Para instalar os pacotes você provavelmente vai precisar utilizar o comando sudo."
+
+#: ../contents/ui/main.qml
+msgid "Current mode:"
+msgstr "Modo atual:"
+
+#: ../contents/ui/main.qml
+msgid "Integrated"
+msgstr "Integrado"
+
+#: ../contents/ui/main.qml
+msgid "Hybrid"
+msgstr "Hibrido"
+
+#: ../contents/ui/main.qml
+msgid "Compute"
+msgstr "Compute"
+
+#: ../contents/ui/main.qml
+msgid "Current profile:"
+msgstr "Perfil atual:"
+
+#: ../contents/ui/main.qml
+msgid "Switch Card"
+msgstr "Alterar modo gráfico"
+
+#: ../contents/ui/main.qml
+msgid "Restart pending to apply changes"
+msgstr "Reinicialização pendente."
+
+#: ../contents/ui/main.qml
+msgid "You have selected the %1 mode as the system graphics mode. You must reboot your computer for the change to take effect."
+msgstr "Você selecionou o modo %1 como o modo de grafíco do sistema. Você precisa reiniciar o computador para que as mudanças tenham efeito."
+
+#: ../contents/ui/main.qml
+msgid "Do you want to reboot now?"
+msgstr "Você quer reiniciar agora?"
+
+#: ../contents/ui/main.qml
+msgid "Operation Error"
+msgstr "Erro de operação"
+
+#: ../contents/ui/main.qml
+msgid "The operation might have not completed, an error occurred."
+msgstr "A operação pode não ter sido completada pois um erro foi detectado."
+
+#: ../contents/ui/main.qml
+msgid "Exit Code: %1"
+msgstr "Código de saida: %1"
+
+#: ../contents/ui/main.qml
+msgid "Error: %1"
+msgstr "Erro: %1"
+
+#: ../contents/ui/main.qml
+msgid "Graphics switch already in progress..."
+msgstr "Mudança de modo em andamento..."
+
+#: ../contents/ui/main.qml
+msgid "Another graphics mode switch is already in progress..."
+msgstr "Uma outra mudança de modo gráfico ja está em andamento..."
+
+#: ../contents/ui/main.qml
+msgid "Hotplug Detected"
+msgstr "Hot-plug detectado."
+
+#: ../contents/ui/main.qml
+msgid "Switch to Hybrid or NVIDIA mode to use external displays,"
+msgstr "Altere para o modo Híbrido ou NVIDIA para utilizar monitores externos."
+
+#: ../contents/ui/main.qml
+msgid "External displays are connected to the NVIDIA card. Switch to %1 mode to use them."
+msgstr "MOnitores externos são conectados a placa NVIDIA. Mude para o modo %1 para usar monitores externos."
+
+#: ../contents/ui/main.qml
+msgid "Do you want to switch to %1 graphics mode now?"
+msgstr "Você quer alterar o modo gráfico para %1 agora?"
+
+#: ../contents/ui/main.qml
+msgid "Graphics Mode"
+msgstr "Modo Gráfico"
+
+#: ../contents/ui/main.qml
+msgid "Executing system76-power..."
+msgstr "Executando o system76-power..."
+
+#: ../contents/ui/main.qml
+msgid "A reboot is pending."
+msgstr "Uma reinicialização está pendente"
+
+#: ../contents/ui/main.qml
+msgid "NVIDIA Mode"
+msgstr "Modo NVIDIA"
+
+#: ../contents/ui/main.qml
+msgid "Integrated Mode"
+msgstr "Modo Integrado"
+
+#: ../contents/ui/main.qml
+msgid "Hybrid Mode"
+msgstr "Modo Hibrido"
+
+#: ../contents/ui/main.qml
+msgid "Compute Mode"
+msgstr "Modo Compute"
+
+#: ../contents/ui/main.qml
+msgid "NVIDIA Settings"
+msgstr "Configurações NVIDIA"
+
+#: ../contents/ui/main.qml
+msgid "Power Profile"
+msgstr "Perfil de Energia"
