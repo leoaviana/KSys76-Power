@@ -222,6 +222,30 @@ Item {
     }
 
     PlasmaCore.DataSource {
+        
+        id: switchbatterymode
+        engine: "executable"
+        connectedSources: []
+        onNewData: {
+            var exitCode = data["exit code"]
+            var exitStatus = data["exit status"]
+            var stdout = data["stdout"]
+            var stderr = data["stderr"]
+            exited(sourceName, exitCode, exitStatus, stdout, stderr)
+            disconnectSource(sourceName)
+        }
+        
+        function exec(cmd) {
+            if (cmd) {
+                connectSource(cmd)
+            }
+        }
+        
+        signal exited(string cmd, int exitCode, int exitStatus, string stdout, string stderr)
+        
+    }
+
+    PlasmaCore.DataSource {
         id: findgpu
         engine: "executable"
         connectedSources: []
@@ -423,7 +447,7 @@ Item {
 
     function setProfile(mode)
     {
-        executable.exec("dbus-send --system --reply-timeout=300000 --print-reply=literal --dest=com.system76.PowerDaemon /com/system76/PowerDaemon com.system76.PowerDaemon." + mode)
+        switchbatterymode.exec("dbus-send --system --reply-timeout=300000 --print-reply=literal --dest=com.system76.PowerDaemon /com/system76/PowerDaemon com.system76.PowerDaemon." + mode)
         root.running =  false
     }
 
@@ -431,19 +455,14 @@ Item {
         root.profilemode = mode 
         root.running = true
 
-        function vText(name, x) { return x ? i18n("Profile '%1' selected", name) :  i18n("Energy profile '%1' applied successfuly.", name)}
-
         switch (mode) {
             case 1:
-                sendNotify(getIcon('default', true), vText(i18n("Economy"), true), vText(i18n("Economy"), false))
                 setProfile("Battery")
                 break
             case 2:
-                sendNotify(getIcon('default', true), vText(i18n("Balanced"), true), vText(i18n("Balanced"), false))
                 setProfile("Balanced")
                 break
             case 3:
-                sendNotify(getIcon('default', true), vText(i18n("Performance"), true), vText(i18n("Performance"), false))
                 setProfile("Performance")
                 break 
         }
@@ -501,6 +520,34 @@ Item {
         }
     }
     
+    Connections {
+        target: switchbatterymode
+
+        function onExited (cmd, exitCode, exitStatus, stdout, stderr) {
+            if(exitCode == 0){
+                function vText(name, x) { return x ? i18n("Profile '%1' selected", name) :  i18n("Energy profile '%1' applied successfuly.", name)}
+                switch (root.profilemode) {
+                    case 1:
+                        sendNotify(getIcon('default', true), vText(i18n("Economy"), true), vText(i18n("Economy"), false))
+                        break
+                    case 2:
+                        sendNotify(getIcon('default', true), vText(i18n("Balanced"), true), vText(i18n("Balanced"), false))
+                        break
+                    case 3:
+                        sendNotify(getIcon('default', true), vText(i18n("Performance"), true), vText(i18n("Performance"), false))
+                        break 
+                }
+            }
+            else
+            {
+                sendNotify(getIcon('default', true), i18n("Operation Error"), i18n("The operation might have not completed, an error occurred.") + "\n\n" + i18n("Exit Code: %1", exitCode) + "\n" + i18n("Error: %1", stderr))
+            }
+
+            running = false
+        }
+    }
+
+
     Connections {
         target: switchcard
 
